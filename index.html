@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Catalog</title>
+    <title>Spice House - Product Catalog</title>
     <style>
         /* Bootstrap CSS */
         body {
@@ -17,6 +17,52 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+        }
+        .brand-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .brand-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+        .contact-box {
+            background-color: #292929;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .contact-box h2 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .contact-icons a {
+            text-decoration: none;
+            color: #00e676;
+            font-size: 1.5rem;
         }
         h1 {
             text-align: center;
@@ -75,13 +121,31 @@
             color: #00e676;
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <div class="container">
-        <h1>Nutritious Homemade South Indian Products by Jayashri K V.</h1>
-        <p>Explore our wide range of organic, fresh, and homemade food items. description to be filled.</p>
+        <!-- Brand Header -->
+        <div class="brand-header">
+            <div class="logo">S</div>
+            <div class="brand-name">Spice House</div>
+        </div>
 
+        <!-- Contact Section -->
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <div class="contact-icons">
+                <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> Call Us</a>
+                <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Product Catalog Description -->
+        <h1>Delicious Organic Products by Jayashri K V.</h1>
+        <p>Explore our wide range of organic, fresh, and homemade. Details to be filled.</p>
+
+        <!-- Product Grid -->
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-img">Image</div>
