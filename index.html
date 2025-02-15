@@ -76,6 +76,25 @@
             margin: auto;
             color: #ddd;
         }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #ffcc00;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        .tab.active {
+            background-color: #ffcc00;
+            color: #1e1e1e;
+        }
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -120,6 +139,9 @@
             font-weight: bold;
             color: #00e676;
         }
+        .hidden {
+            display: none;
+        }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -142,11 +164,17 @@
         </div>
 
         <!-- Product Catalog Description -->
-        <h1>Delicious Organic Products by Jayashri K V.</h1>
-        <p>Explore our wide range of organic, fresh, and homemade. Details to be filled.</p>
+        <h1>Delicious Organic Homemade Products by Jayashri</h1>
+        <p>Explore our wide range of organic, fresh, and handpicked products that bring nature's best to your doorstep.</p>
 
-        <!-- Product Grid -->
-        <div class="product-grid">
+        <!-- Tabs for Product Categories -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('dry-fruits')">Dry Fruits</div>
+            <div class="tab" onclick="switchTab('spices')">Spices</div>
+        </div>
+
+        <!-- Dry Fruits Section -->
+        <div id="dry-fruits" class="product-grid">
             <div class="product-card">
                 <div class="product-img">Image</div>
                 <div class="product-title">Organic Almonds</div>
@@ -160,22 +188,36 @@
                 <div class="product-description">Packed with vitamins, minerals, and a creamy texture.</div>
                 <div class="product-price">₹600 / 500g</div>
             </div>
+        </div>
 
+        <!-- Spices Section (Hidden by Default) -->
+        <div id="spices" class="product-grid hidden">
             <div class="product-card">
                 <div class="product-img">Image</div>
-                <div class="product-title">Organic Honey</div>
-                <div class="product-description">Pure and raw honey, rich in antioxidants and natural sweetness.</div>
-                <div class="product-price">₹350 / 500g</div>
+                <div class="product-title">Organic Turmeric</div>
+                <div class="product-description">Boosts immunity and has anti-inflammatory properties.</div>
+                <div class="product-price">₹300 / 500g</div>
             </div>
 
             <div class="product-card">
                 <div class="product-img">Image</div>
-                <div class="product-title">Dried Figs</div>
-                <div class="product-description">High in fiber and a great source of natural energy.</div>
-                <div class="product-price">₹500 / 500g</div>
+                <div class="product-title">Cinnamon Sticks</div>
+                <div class="product-description">Rich in antioxidants and enhances metabolism.</div>
+                <div class="product-price">₹250 / 500g</div>
             </div>
         </div>
     </div>
+
+    <script>
+        function switchTab(category) {
+            document.getElementById('dry-fruits').classList.add('hidden');
+            document.getElementById('spices').classList.add('hidden');
+            document.getElementById(category).classList.remove('hidden');
+
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`[onclick="switchTab('${category}')"]`).classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
