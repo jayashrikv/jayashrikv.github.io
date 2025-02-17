@@ -17,30 +17,33 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            background-image: url('images/the-ancient-spice-house-logo.jpg');
+            /* background-image: url('images/the-ancient-spice-house-logo.jpg'); */
         }
         .brand-header {
             text-align: center;
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center align */
         }
         .logo {
-            display: block;
-            margin: 0 auto;
-            width: 100px;
-            height: 100px;
-            background-color: #ffcc00;
-            border-radius: 50%;
+            width: 200px;  /* Adjust as needed */
+            height: 200px; /* Make it a perfect circle */
+            border-radius: 50%; /* Makes it round */
+            overflow: hidden; /* Ensures the image stays inside the rounded border */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1e1e1e;
+        }
+        .logo img {
+            width: 100%; /* Ensures it fills the div */
+            height: 100%;
+            object-fit: cover; /* Keeps aspect ratio and fills the circle */
         }
         .brand-name {
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: bold;
-            color: #ffcc00;
+            color: #c9a100;
             margin-top: 10px;
         }
         .contact-box {
@@ -68,7 +71,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #ffcc00;
+            color: #9c7d00;
         }
         p {
             text-align: center;
@@ -90,7 +93,6 @@
             border-radius: 5px;
             margin: 0 5px;
             font-size: 1.2rem;
-            transition: background 0.3s;
         }
         .tab.active {
             background-color: #ffcc00;
@@ -121,10 +123,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden; /* Prevent image overflow */
             color: #999;
             font-size: 1.5rem;
             font-weight: bold;
         }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fits within the container */
+            object-position: center; /* Keeps the image centered */
+}
         .product-title {
             font-size: 1.3rem;
             margin: 10px 0;
@@ -140,6 +149,10 @@
             font-weight: bold;
             color: #00e676;
         }
+        .preparation-time {
+            margin: 10px;
+            color: #ffcc00;
+        }
         .hidden {
             display: none;
         }
@@ -151,7 +164,7 @@
     <div class="container">
         <!-- Brand Header -->
         <div class="brand-header">
-            <!-- <div class="logo"><img src="images/the-ancient-spice-house-logo.jpg" alt="Spice House Logo"></div> -->
+            <div class="logo"><img src="images/the-ancient-spice-house-logo.jpg" alt="Spice House Logo"></div>
             <div class="brand-name">The Ancient Spice House</div>
         </div>
 
@@ -162,42 +175,62 @@
         <!-- Tabs for Product Categories -->
         <div class="tabs">
             <div class="tab active" onclick="switchTab('dry-pudis')">Dry Pudis</div>
-            <div class="tab" onclick="switchTab('spices')">Lehya</div>
+            <div class="tab" onclick="switchTab('lehya')">Lehya</div>
         </div>
 
-        <!-- Dry Fruits Section -->
+        <!-- Pudis Section -->
         <div id="dry-pudis" class="product-grid">
             <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="product-img">
+                    <img src="images/pudina-leaves.jpg" alt="Pudina Leaves Pudi">
+                </div>
                 <div class="product-title">Pudina Leaves Pudi</div>
-                <div class="product-description">Rich in healthy fats, protein, and antioxidants.</div>
-                <div class="product-price">₹450 / 500g</div>
+                <div class="product-description">
+                    Natural body cooler, rich in nutrients, improve irritable bowel syndrome, relieve indigestion, and more.
+                </div>
+                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
 
             <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="product-img">
+                    <img src="images/curry-leaves.jpg" alt="Curry Leaves Pudi">
+                </div>
                 <div class="product-title">Curry Leaves Pudi</div>
-                <div class="product-description">Packed with vitamins, minerals, and a creamy texture.</div>
-                <div class="product-price">₹600 / 500g</div>
+                <div class="product-description">
+                    Lowers cholesterol level, boosts digestion, aids hair growth, maintains eye health, helps in weight loss, blood circulation and more.
+                </div>
+                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
 
             <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="product-img">
+                    <img src="images/ganike-leaves.jpg" alt="Ganike Leaves Pudi">
+                </div>
                 <div class="product-title">Ganike Leaves Pudi</div>
-                <div class="product-description">Rich in healthy fats, protein, and antioxidants.</div>
-                <div class="product-price">₹450 / 500g</div>
+                <div class="product-description">
+                    Improves digestion and alleviates stomach ulcers, boosts immunity, promotes healthy skin, remedy for cold and cough and for stomach related problems.
+                </div>
+                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
 
             <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="product-img">
+                    <img src="images/brahmi-leaves.jpg" alt="Brahmi Leaves Pudi">
+                </div>
                 <div class="product-title">Brahmi Leaves Pudi</div>
-                <div class="product-description">Packed with vitamins, minerals, and a creamy texture.</div>
-                <div class="product-price">₹600 / 500g</div>
+                <div class="product-description">
+                    Contains powerful antioxidants, boost brain function, reduce inflammation, help lower blood pressure levels, prevent anxiety and stress.
+                </div>
+                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
         </div>
 
-        <!-- Spices Section (Hidden by Default) -->
-        <div id="spices" class="product-grid hidden">
+        <!-- Lehya Section (Hidden by Default) -->
+        <div id="lehya" class="product-grid hidden">
             <div class="product-card">
                 <div class="product-img">Image</div>
                 <div class="product-title">Organic Turmeric</div>
@@ -228,7 +261,7 @@
     <script>
         function switchTab(category) {
             document.getElementById('dry-pudis').classList.add('hidden');
-            document.getElementById('spices').classList.add('hidden');
+            document.getElementById('lehya').classList.add('hidden');
             document.getElementById(category).classList.remove('hidden');
 
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
