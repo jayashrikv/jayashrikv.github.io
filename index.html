@@ -60,6 +60,18 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
+        .note-box {
+            background-color: #292929;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .note-box h3 {
+            color: #ffcc00;
+            margin-bottom: 8px;
+        }
         .contact-box h2 {
             color: #ffcc00;
             margin-bottom: 10px;
@@ -182,20 +194,45 @@
         <!-- Tabs for Product Categories -->
         <div class="tabs">
             <div class="tab active" onclick="switchTab('dry-pudis')">Dry Pudis</div>
-            <div class="tab" onclick="switchTab('lehya')">Lehya</div>
+            <div class="tab" onclick="switchTab('post-natal')">Post Natal Care</div>
+            <div class="tab" onclick="switchTab('chutny')">Chutny</div>
         </div>
 
         <!-- Pudis Section -->
         <div id="dry-pudis" class="product-grid">
             <div class="product-card">
                 <div class="product-img">
-                    <img src="images/pudina-leaves.jpg" alt="Pudina Leaves Pudi">
+                    <img src="images/ganike-leaves.jpg" alt="Ganike Tambuli Pudi">
                 </div>
-                <div class="product-title">Pudina Leaves Pudi</div>
+                <div class="product-title">Ganike Tambuli Pudi</div>
+                <div class="product-description">
+                    Improves digestion and alleviates stomach ulcers, boosts immunity, promotes healthy skin, remedy for cold and cough and for stomach related problems.
+                </div>
+                <div class="product-price">₹178/100g | ₹429/250g</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/brahmi-leaves.jpg" alt="Brahmi Tambuli Pudi">
+                </div>
+                <div class="product-title">Brahmi Tambuli Pudi</div>
+                <div class="product-description">
+                    Contains powerful antioxidants, boost brain function, reduce inflammation, help lower blood pressure levels, prevent anxiety and stress.
+                </div>
+                <div class="product-price">₹190/100g | ₹458/250g</div>
+                <div class="preparation-time">Preparation Time: 5 Days</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/pudina-leaves.jpg" alt="Pudina Pudi">
+                </div>
+                <div class="product-title">Pudina Pudi</div>
                 <div class="product-description">
                     Natural body cooler, rich in nutrients, improve irritable bowel syndrome, relieve indigestion, and more.
                 </div>
-                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="product-price">₹108/100g | ₹239/250g</div>
                 <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
 
@@ -207,56 +244,77 @@
                 <div class="product-description">
                     Lowers cholesterol level, boosts digestion, aids hair growth, maintains eye health, helps in weight loss, blood circulation and more.
                 </div>
-                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
-                <div class="preparation-time">Preparation Time: 5 Days</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/ganike-leaves.jpg" alt="Ganike Leaves Pudi">
-                </div>
-                <div class="product-title">Ganike Leaves Pudi</div>
-                <div class="product-description">
-                    Improves digestion and alleviates stomach ulcers, boosts immunity, promotes healthy skin, remedy for cold and cough and for stomach related problems.
-                </div>
-                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
-                <div class="preparation-time">Preparation Time: 5 Days</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/brahmi-leaves.jpg" alt="Brahmi Leaves Pudi">
-                </div>
-                <div class="product-title">Brahmi Leaves Pudi</div>
-                <div class="product-description">
-                    Contains powerful antioxidants, boost brain function, reduce inflammation, help lower blood pressure levels, prevent anxiety and stress.
-                </div>
-                <div class="product-price">₹1200/500g | ₹2000/1Kg</div>
+                <div class="product-price">₹121/100g | ₹278/250g</div>
                 <div class="preparation-time">Preparation Time: 5 Days</div>
             </div>
         </div>
 
-        <!-- Lehya Section (Hidden by Default) -->
-        <div id="lehya" class="product-grid hidden">
+        <!-- Post Natal Section (Hidden by Default) -->
+        <div id="post-natal" class="product-grid hidden">
             <div class="product-card">
                 <div class="product-img">
                     <img src="images/plain-lehya.jpg" alt="Plain Lehya">
                 </div>
-                <div class="product-title">Plain Lehya</div>
+                <div class="product-title">Lehya</div>
                 <div class="product-description">Primarily for post maternal care, improves stamina, and is effective against digestive ailments such as sprue and constipation.</div>
-                <div class="product-price">2400/1Kg</div>
+                <div class="product-price">₹2200/1Kg</div>
                 <div class="preparation-time">Preparation Time: 2 Weeks</div>
             </div>
 
             <div class="product-card">
                 <div class="product-img">
-                    <img src="images/ginger-lehya.jpg" alt="Ginger Lehya">
+                    <img src="images/sukku-vellam.jpg" alt="Sukku Vellam">
                 </div>
-                <div class="product-title">Ginger Lehya</div>
-                <div class="product-description">Primarily for post maternal care, improves stamina, and is effective against digestive ailments such as sprue and constipation.</div>
-                <div class="product-price">2400/1Kg</div>
+                <div class="product-title">Sukku Vellam</div>
+                <div class="product-description">Keeps body warm, improves digestion and resistance.</div>
+                <div class="product-price">₹510/300g</div>
                 <div class="preparation-time">Preparation Time: 2 Weeks</div>
             </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/pudikayam.jpg" alt="Pudikayam">
+                </div>
+                <div class="product-title">Pudikayam</div>
+                <div class="product-description">Detoxifies the body.</div>
+                <div class="product-price">₹600/350g</div>
+                <div class="preparation-time">Preparation Time: 2 Weeks</div>
+            </div>
+        </div>
+
+        <!-- Chutny Section (Hidden by Default) -->
+        <div id="chutny" class="product-grid hidden">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/corriander-leaves.jpg" alt="Corriander Chutny">
+                </div>
+                <div class="product-title">Corriander Chutny</div>
+                <div class="product-description">Primarily for post maternal care, improves stamina, and is effective against digestive ailments such as sprue and constipation.</div>
+                <div class="product-price">₹2200/1Kg</div>
+                <div class="preparation-time">Preparation Time: 2 Weeks</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/ginger-chutny.jpg" alt="Ginger Chutny">
+                </div>
+                <div class="product-title">Ginger Chutny</div>
+                <div class="product-description"></div>
+                <div class="product-price"></div>
+                <div class="preparation-time"></div>
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <br><br>
+        <div class="note-box">
+            <h3>Notes</h3>
+                <ul>
+                    <li>Contact us to get price details for larger quantities for each product. Retail and batch packing available.</li>
+                    <li>The images presented above are for aesthetics and to mainly depict the main ingredient for each product.</li>
+                </ul>
+            
+            <br><br>
         </div>
 
         <!-- Contact Section -->
@@ -268,13 +326,13 @@
                 <a href="https://wa.me/918073124291" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
             </div>
         </div>
-
     </div>
 
     <script>
         function switchTab(category) {
             document.getElementById('dry-pudis').classList.add('hidden');
-            document.getElementById('lehya').classList.add('hidden');
+            document.getElementById('chutny').classList.add('hidden');
+            document.getElementById('post-natal').classList.add('hidden');
             document.getElementById(category).classList.remove('hidden');
 
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
