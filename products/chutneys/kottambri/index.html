@@ -19,67 +19,154 @@
         }
         .product-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .product-image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .product-title {
             font-size: 2.5rem;
             color: #c9a100;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .product-description {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
+        .product-subtitle {
+            font-size: 1.2rem;
+            color: #8a7000;
             margin-bottom: 20px;
+            font-style: italic;
+        }
+        .section {
+            background-color: #292929;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
-        .ingredients {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .ingredients h2 {
+        .section h2 {
             color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .section p {
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.1rem;
             margin-bottom: 15px;
+        }
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #3a3a3a;
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 10px 0;
+            color: #ddd;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 25px;
+        }
+        .benefits-list li:before {
+            content: "•";
+            color: #c9a100;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 5px;
         }
         .back-link {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         .back-link a {
-            color: #c9a100;
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #c9a100;
+            color: #1e1e1e;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
         .back-link a:hover {
-            text-decoration: underline;
+            background-color: #ffcc00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="product-header">
+            <div class="product-image">
+                <img src="../../../images/corriander-leaves.jpg" alt="Fresh Coriander Leaves">
+            </div>
             <h1 class="product-title">Kottambri Chutney</h1>
-            <p>(Fresh Coriander Chutney)</p>
+            <p class="product-subtitle">Fresh Coriander Chutney</p>
         </div>
         
-        <div class="product-description">
-            <p>A fresh and aromatic chutney made from hand-picked coriander leaves. This traditional recipe uses cold-pressed groundnut oil and carefully selected ingredients to create a perfect accompaniment for your meals.</p>
+        <div class="section">
+            <h2>Heritage & Craftsmanship</h2>
+            <p>Experience the vibrant freshness of our artisanal Kottambri Chutney, a celebration of nature's bounty transformed into a delectable accompaniment. Each batch is crafted with freshly harvested coriander leaves, capturing their peak flavor and nutritional benefits.</p>
+            <p>Our traditional preparation method, passed down through generations, involves carefully reducing the chutney in pure cold-pressed groundnut oil, a process that intensifies flavors while preserving the herbs' natural goodness.</p>
         </div>
 
-        <div class="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-                <li>Freshly sourced coriander</li>
-                <li>Green chilli</li>
-                <li>Asafoetida</li>
-                <li>Cold-pressed groundnut oil</li>
+        <div class="section">
+            <h2>Premium Ingredients</h2>
+            <ul class="ingredients-list">
+                <li>✧ Hand-picked fresh coriander leaves, sourced from trusted local farmers</li>
+                <li>✧ Carefully selected green chillies for balanced heat</li>
+                <li>✧ Pure asafoetida (hing), known for its digestive properties</li>
+                <li>✧ Premium cold-pressed groundnut oil, ensuring authentic flavor</li>
             </ul>
         </div>
 
+        <div class="section">
+            <h2>Health Benefits</h2>
+            <ul class="benefits-list">
+                <li>Rich in essential vitamins and minerals</li>
+                <li>Natural detoxifying properties</li>
+                <li>Supports healthy digestion</li>
+                <li>Excellent source of antioxidants</li>
+                <li>Helps maintain balanced blood sugar levels</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Serving Suggestions</h2>
+            <p>This versatile chutney pairs beautifully with dosas, idlis, and other South Indian delicacies. It can also be used as a spread for sandwiches or as a dip for snacks. The cold-pressed groundnut oil not only enhances the flavor but also helps preserve the freshness of the chutney.</p>
+            <p>Store refrigerated and consume within one week of opening to enjoy its fresh, aromatic flavors at their best.</p>
+        </div>
+
         <div class="back-link">
-            <a href="../../../index.html">← Back to Home</a>
+            <a href="../../../index.html">← Return to Home</a>
         </div>
     </div>
 </body>

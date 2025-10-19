@@ -19,68 +19,155 @@
         }
         .product-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .product-image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .product-title {
             font-size: 2.5rem;
             color: #c9a100;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .product-description {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
+        .product-subtitle {
+            font-size: 1.2rem;
+            color: #8a7000;
             margin-bottom: 20px;
+            font-style: italic;
+        }
+        .section {
+            background-color: #292929;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
-        .ingredients {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .ingredients h2 {
+        .section h2 {
             color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .section p {
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.1rem;
             margin-bottom: 15px;
+        }
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #3a3a3a;
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 10px 0;
+            color: #ddd;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 25px;
+        }
+        .benefits-list li:before {
+            content: "•";
+            color: #c9a100;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 5px;
         }
         .back-link {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         .back-link a {
-            color: #c9a100;
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #c9a100;
+            color: #1e1e1e;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
         .back-link a:hover {
-            text-decoration: underline;
+            background-color: #ffcc00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="product-header">
+            <div class="product-image">
+                <img src="../../../images/ganike-leaves.jpg" alt="Ganike (Black Nightshade) Leaves">
+            </div>
             <h1 class="product-title">Ganike Tambuli Pudi</h1>
-            <p>(Black Nightshade / Manathakkali Chutney Powder)</p>
+            <p class="product-subtitle">Black Nightshade / Manathakkali Chutney Powder</p>
         </div>
         
-        <div class="product-description">
-            <p>A unique and nutritious chutney powder featuring the traditional medicinal herb Ganike (Black Nightshade). This carefully crafted blend combines ayurvedic wisdom with delicious taste.</p>
+        <div class="section">
+            <h2>Heritage & Craftsmanship</h2>
+            <p>Discover the profound healing wisdom of traditional Ayurveda with our Ganike Tambuli Pudi. This remarkable blend features the treasured Black Nightshade herb, known for its exceptional medicinal properties and used in traditional healing practices for generations.</p>
+            <p>Each batch is thoughtfully prepared using time-tested methods, ensuring that the therapeutic qualities of the ingredients are preserved in their purest form. The result is a harmonious powder that offers both nourishment and healing properties.</p>
         </div>
 
-        <div class="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-                <li>Dried Ganike leaves</li>
-                <li>Carefully roasted coriander seeds</li>
-                <li>Jeera (Cumin)</li>
-                <li>Pepper</li>
-                <li>Kobri (dried mature coconut)</li>
+        <div class="section">
+            <h2>Artisanal Ingredients</h2>
+            <ul class="ingredients-list">
+                <li>✧ Carefully dried Ganike (Black Nightshade) leaves, harvested at their peak potency</li>
+                <li>✧ Aromatic coriander seeds, slow-roasted to enhance their natural oils</li>
+                <li>✧ Premium jeera (cumin), selected for its digestive properties</li>
+                <li>✧ Hand-picked black pepper, adding warmth and improving bioavailability</li>
+                <li>✧ Fresh kobri (dried mature coconut), providing a rich, creamy texture</li>
             </ul>
         </div>
 
+        <div class="section">
+            <h2>Traditional Benefits</h2>
+            <ul class="benefits-list">
+                <li>Supports digestive health and alleviates stomach discomfort</li>
+                <li>Known for its natural anti-inflammatory properties</li>
+                <li>Helps boost immunity and overall vitality</li>
+                <li>Traditionally used for maintaining skin health</li>
+                <li>Provides relief from seasonal ailments</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Usage & Storage</h2>
+            <p>For a traditional tambuli experience, blend a spoonful with fresh yogurt or buttermilk. Alternatively, sprinkle over hot rice with a touch of ghee for a comforting meal. This versatile powder can also be used to enhance the nutritional value of various dishes.</p>
+            <p>Store in an airtight container away from direct sunlight to preserve its medicinal properties and aromatic essence.</p>
+        </div>
+
         <div class="back-link">
-            <a href="../../../index.html">← Back to Home</a>
+            <a href="../../../index.html">← Return to Home</a>
         </div>
     </div>
 </body>

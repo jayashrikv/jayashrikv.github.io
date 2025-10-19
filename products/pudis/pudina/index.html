@@ -19,68 +19,155 @@
         }
         .product-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .product-image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .product-title {
             font-size: 2.5rem;
             color: #c9a100;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .product-description {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
+        .product-subtitle {
+            font-size: 1.2rem;
+            color: #8a7000;
             margin-bottom: 20px;
+            font-style: italic;
+        }
+        .section {
+            background-color: #292929;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
-        .ingredients {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .ingredients h2 {
+        .section h2 {
             color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .section p {
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.1rem;
             margin-bottom: 15px;
+        }
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #3a3a3a;
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 10px 0;
+            color: #ddd;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 25px;
+        }
+        .benefits-list li:before {
+            content: "•";
+            color: #c9a100;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 5px;
         }
         .back-link {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         .back-link a {
-            color: #c9a100;
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #c9a100;
+            color: #1e1e1e;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
         .back-link a:hover {
-            text-decoration: underline;
+            background-color: #ffcc00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="product-header">
+            <div class="product-image">
+                <img src="../../../images/pudina-leaves.jpg" alt="Fresh Mint Leaves">
+            </div>
             <h1 class="product-title">Pudina Pudi</h1>
-            <p>(Mint Chutney Powder)</p>
+            <p class="product-subtitle">Mint Chutney Powder</p>
         </div>
         
-        <div class="product-description">
-            <p>A refreshing and flavorful chutney powder that brings together the cooling properties of mint with traditional ingredients. This versatile powder adds a delightful twist to your daily meals.</p>
+        <div class="section">
+            <h2>Heritage & Craftsmanship</h2>
+            <p>Experience the cooling embrace of nature with our artisanal Pudina Pudi. This refreshing blend harnesses the invigorating properties of mint, carefully combined with traditional ingredients to create a powder that's both flavorful and beneficial for your well-being.</p>
+            <p>Each batch is mindfully prepared to preserve the volatile oils of mint, ensuring that every pinch delivers both the aromatic freshness and the therapeutic benefits that mint is celebrated for in Ayurvedic tradition.</p>
         </div>
 
-        <div class="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-                <li>Dried and slightly roasted mint leaves</li>
-                <li>Channa dal</li>
-                <li>Red chillies</li>
-                <li>Tamarind</li>
-                <li>Kobri (dried mature coconut)</li>
+        <div class="section">
+            <h2>Artisanal Ingredients</h2>
+            <ul class="ingredients-list">
+                <li>✧ Fresh mint leaves, sun-dried and lightly roasted to preserve essential oils</li>
+                <li>✧ Premium channa dal, adding protein and a nutty depth</li>
+                <li>✧ Select red chillies, providing warmth and balance</li>
+                <li>✧ Natural tamarind, contributing a subtle tanginess</li>
+                <li>✧ Fresh kobri (dried mature coconut), lending richness and texture</li>
             </ul>
         </div>
 
+        <div class="section">
+            <h2>Traditional Benefits</h2>
+            <ul class="benefits-list">
+                <li>Natural cooling properties perfect for hot weather</li>
+                <li>Aids in digestion and appetite regulation</li>
+                <li>Helps alleviate minor stomach discomfort</li>
+                <li>Rich in antioxidants and essential nutrients</li>
+                <li>Provides a refreshing boost to your daily meals</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Usage & Storage</h2>
+            <p>Mix with yogurt for a cooling raita, sprinkle over rice with a drizzle of ghee, or use as a flavor enhancer for vegetables and salads. Its versatility makes it a perfect accompaniment for both traditional and modern cuisine.</p>
+            <p>Store in an airtight container in a cool, dry place to maintain its refreshing aroma and beneficial properties. The natural oils in mint make this powder particularly aromatic - a little goes a long way!</p>
+        </div>
+
         <div class="back-link">
-            <a href="../../../index.html">← Back to Home</a>
+            <a href="../../../index.html">← Return to Home</a>
         </div>
     </div>
 </body>

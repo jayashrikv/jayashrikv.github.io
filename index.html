@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bheshaja - Ayurvedic Products</title>
+    <title>Bheshaja - Artisanal Ayurvedic Products</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -25,17 +25,41 @@
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .brand-name {
             font-size: 4rem;
             font-weight: bold;
             color: #c9a100;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .brand-tagline {
+            font-size: 1.5rem;
+            color: #8a7000;
+            margin-bottom: 20px;
+            font-style: italic;
         }
         .brand-description {
             font-size: 1.2rem;
             color: #ddd;
             max-width: 800px;
             margin: 20px auto;
+            line-height: 1.6;
         }
         .about-section {
             background-color: #292929;
@@ -58,17 +82,34 @@
             text-align: center;
             transition: transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .product-card:hover {
             transform: translateY(-5px);
         }
+        .product-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .product-card h3 {
             color: #c9a100;
             margin-bottom: 10px;
+            font-size: 1.5rem;
         }
         .product-card p {
             margin-bottom: 15px;
             color: #cccccc;
+            line-height: 1.5;
         }
         .product-link {
             display: inline-block;
@@ -77,16 +118,19 @@
             color: #1e1e1e;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
         .product-link:hover {
             background-color: #ffcc00;
+            transform: scale(1.05);
         }
         .section-title {
             color: #c9a100;
             text-align: center;
             margin: 40px 0 30px;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         .contact-section {
             background-color: #292929;
@@ -102,58 +146,79 @@
         .contact-info {
             color: #ddd;
             font-size: 1.1rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="brand-header">
+            <div class="logo">
+                <img src="images/bheshaja-logo.png" alt="Bheshaja Logo">
+            </div>
             <h1 class="brand-name">भेषज Bheshaja</h1>
-            <p class="brand-description">Welcome to Bheshaja, a home-based business dedicated to creating authentic, healthy, and traditional Ayurvedic products. Our carefully crafted items are made with locally sourced ingredients and traditional methods, bringing you the best of ancient wisdom in every package.</p>
+            <p class="brand-tagline">Crafting Wellness Through Ancient Wisdom</p>
+            <p class="brand-description">Welcome to Bheshaja, where time-honored Ayurvedic traditions meet contemporary wellness needs. Our artisanal products are meticulously crafted in small batches, using hand-picked, locally sourced ingredients that embody the pure essence of nature's healing power. Each creation is a testament to centuries of traditional wisdom, prepared with unwavering dedication to authenticity and quality.</p>
         </div>
 
-        <h2 class="section-title">Our Chutney Powders (Pudis)</h2>
+        <h2 class="section-title">Our Signature Chutney Powders (Pudis)</h2>
         <div class="products-grid">
             <div class="product-card">
+                <div class="product-img">
+                    <img src="images/curry-leaves.jpg" alt="Karibevu Pudi">
+                </div>
                 <h3>Karibevu Pudi</h3>
-                <p>A traditional curry leaf chutney powder made with carefully roasted curry leaves, urad dal, pepper, tamarind, and dried coconut. Perfect for enhancing your daily meals with authentic flavors.</p>
-                <a href="products/pudis/karibevu/index.html" class="product-link">Learn More</a>
+                <p>A masterfully crafted curry leaf chutney powder that brings together the aromatic essence of carefully roasted curry leaves, protein-rich urad dal, warming black pepper, tangy tamarind, and the richness of dried coconut. This harmonious blend not only enhances your daily meals but also provides numerous health benefits.</p>
+                <a href="products/pudis/karibevu/index.html" class="product-link">Discover More</a>
             </div>
             <div class="product-card">
+                <div class="product-img">
+                    <img src="images/pudina-leaves.jpg" alt="Pudina Pudi">
+                </div>
                 <h3>Pudina Pudi</h3>
-                <p>A refreshing mint chutney powder combining dried mint leaves, channa dal, red chillies, tamarind, and dried coconut. A perfect blend of cooling properties and traditional taste.</p>
-                <a href="products/pudis/pudina/index.html" class="product-link">Learn More</a>
+                <p>Experience the refreshing blend of sun-dried mint leaves, perfectly roasted channa dal, hand-selected red chillies, natural tamarind, and premium dried coconut. This cooling and digestive powder is your perfect companion for maintaining wellness while adding a burst of flavor to your meals.</p>
+                <a href="products/pudis/pudina/index.html" class="product-link">Discover More</a>
             </div>
             <div class="product-card">
+                <div class="product-img">
+                    <img src="images/ganike-leaves.jpg" alt="Ganike Tambuli Pudi">
+                </div>
                 <h3>Ganike Tambuli Pudi</h3>
-                <p>Black Nightshade (Manathakkali) chutney powder, made with dried ganike leaves, roasted coriander seeds, jeera, pepper, and coconut. Rich in traditional medicinal properties.</p>
-                <a href="products/pudis/tambuli_ganike/index.html" class="product-link">Learn More</a>
+                <p>Discover the ancient healing power of Black Nightshade in this traditional blend, featuring carefully dried ganike leaves combined with aromatic roasted coriander seeds, cumin, black pepper, and coconut. A true embodiment of Ayurvedic wisdom in every spoonful.</p>
+                <a href="products/pudis/tambuli_ganike/index.html" class="product-link">Discover More</a>
             </div>
             <div class="product-card">
+                <div class="product-img">
+                    <img src="images/brahmi-leaves.jpg" alt="Ondelaga Tambuli Pudi">
+                </div>
                 <h3>Ondelaga Tambuli Pudi</h3>
-                <p>Brahmi (Water Hyssop) chutney powder crafted with dried ondelaga leaves, roasted coriander seeds, jeera, pepper, and coconut. A traditional ayurvedic blend.</p>
-                <a href="products/pudis/tambuli_ondelega/index.html" class="product-link">Learn More</a>
+                <p>Harness the cognitive-enhancing properties of Brahmi (Water Hyssop) in this sacred blend. Made with pristine dried ondelaga leaves, expertly roasted coriander seeds, cumin, pepper, and coconut, this powder is a gateway to traditional wellness.</p>
+                <a href="products/pudis/tambuli_ondelega/index.html" class="product-link">Discover More</a>
             </div>
         </div>
 
-        <h2 class="section-title">Fresh Chutneys</h2>
+        <h2 class="section-title">Artisanal Fresh Chutneys</h2>
         <div class="products-grid">
             <div class="product-card">
+                <div class="product-img">
+                    <img src="images/corriander-leaves.jpg" alt="Kottambri Chutney">
+                </div>
                 <h3>Kottambri Chutney</h3>
-                <p>A fresh and aromatic coriander chutney made with freshly sourced coriander, green chilli, and asafoetida, reduced by frying in cold-pressed groundnut oil.</p>
-                <a href="products/chutneys/kottambri/index.html" class="product-link">Learn More</a>
+                <p>Indulge in the vibrant freshness of hand-picked coriander leaves, transformed into a delectable chutney using traditional methods. Enhanced with green chillies and pure asafoetida, then lovingly reduced in cold-pressed groundnut oil, this chutney is a celebration of authentic flavors and wholesome goodness.</p>
+                <a href="products/chutneys/kottambri/index.html" class="product-link">Discover More</a>
             </div>
         </div>
 
         <div class="about-section">
-            <h2 style="color: #c9a100;">About Our Products</h2>
-            <p>Each product at Bheshaja is crafted with care and attention to detail. We use only carefully selected, locally sourced ingredients to ensure the highest quality. Our traditional preparation methods preserve the authentic taste and therapeutic properties of each ingredient. Every product comes with a QR code that links to detailed information about its ingredients and benefits.</p>
+            <h2 style="color: #c9a100;">The Bheshaja Promise</h2>
+            <p>At Bheshaja, we are more than just producers of traditional foods - we are custodians of ancient wisdom. Every product in our collection is crafted with mindful attention to detail, using time-honored techniques passed down through generations. Our ingredients are thoughtfully sourced from local farmers who share our commitment to purity and sustainability.</p>
+            <p>Each product bears a unique QR code, connecting you to detailed information about its ingredients, benefits, and the ancient wisdom behind its creation. This bridge between tradition and technology ensures that you have complete transparency about what goes into your food and its impact on your well-being.</p>
         </div>
 
         <div class="contact-section">
-            <h2>Contact Us</h2>
-            <p class="contact-info">For orders and inquiries, please reach out to us:</p>
-            <p class="contact-info">Phone/WhatsApp: +91-8073124291</p>
+            <h2>Connect With Us</h2>
+            <p class="contact-info">We'd love to share our passion for traditional wellness with you.</p>
+            <p class="contact-info">For orders and inquiries:<br>Phone/WhatsApp: +91-8073124291</p>
         </div>
     </div>
 </body>
