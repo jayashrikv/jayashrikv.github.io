@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Ancient House - Product Catalog</title>
+    <title>Bheshaja - Ayurvedic Products</title>
     <style>
-        /* Bootstrap CSS */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #1e1e1e;
@@ -17,358 +16,145 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            /* background-image: url('images/the-ancient-spice-house-logo.jpg'); */
         }
         .brand-header {
             text-align: center;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center align */
-        }
-        .logo {
-            width: 200px;  /* Adjust as needed */
-            height: 200px; /* Make it a perfect circle */
-            border-radius: 50%; /* Makes it round */
-            overflow: hidden; /* Ensures the image stays inside the rounded border */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo img {
-            width: 100%; /* Ensures it fills the div */
-            height: 100%;
-            object-fit: cover; /* Keeps aspect ratio and fills the circle */
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #292929;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
         .brand-name {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: bold;
             color: #c9a100;
-            margin-top: 10px;
-        }
-        .brand-subname {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #c9a100;
-            margin-top: 10px;
-        }
-        .contact-box {
-            background-color: #292929;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .note-box {
-            background-color: #292929;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: left;
-            margin-bottom: 5px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .about-box {
-            background-color: #292929;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 5px;
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-        }
-        .about-box h3 {
-            color: #ffcc00;
-            margin-bottom: 8px;
-        }
-        .note-box h3 {
-            color: #ffcc00;
-            margin-bottom: 8px;
-        }
-        .contact-box h2 {
-            color: #ffcc00;
             margin-bottom: 10px;
         }
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .contact-icons a {
-            text-decoration: none;
-            color: #00e676;
-            font-size: 1.5rem;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #9c7d00;
-        }
-        p {
-            text-align: center;
+        .brand-description {
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: auto;
             color: #ddd;
+            max-width: 800px;
+            margin: 20px auto;
         }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        .about-section {
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
         }
-        .tab {
-            padding: 10px 20px;
-            background-color: #444;
-            color: #ffcc00;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 0 5px;
-            font-size: 1.2rem;
-        }
-        .tab.active {
-            background-color: #ffcc00;
-            color: #1e1e1e;
-        }
-        .product-grid {
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
         .product-card {
             background-color: #292929;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 15px;
+            padding: 20px;
             text-align: center;
+            transition: transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
         }
         .product-card:hover {
             transform: translateY(-5px);
         }
-        .product-img {
-            width: 100%;
-            height: 200px;
-            background: #444;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden; /* Prevent image overflow */
-            color: #999;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fits within the container */
-            object-position: center; /* Keeps the image centered */
-}
-        .product-title {
-            font-size: 1.3rem;
-            margin: 10px 0;
-            color: #ffcc00;
-        }
-        .product-description {
-            font-size: 1rem;
-            color: #bbb;
+        .product-card h3 {
+            color: #c9a100;
             margin-bottom: 10px;
         }
-        .product-price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #00e676;
+        .product-card p {
+            margin-bottom: 15px;
+            color: #cccccc;
         }
-        .preparation-time {
-            margin: 10px;
-            color: #ffcc00;
+        .product-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #c9a100;
+            color: #1e1e1e;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .hidden {
-            display: none;
+        .product-link:hover {
+            background-color: #ffcc00;
+        }
+        .section-title {
+            color: #c9a100;
+            text-align: center;
+            margin: 40px 0 30px;
+            font-size: 2rem;
+        }
+        .contact-section {
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+        }
+        .contact-section h2 {
+            color: #c9a100;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            color: #ddd;
+            font-size: 1.1rem;
         }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <div class="container">
-        <!-- Brand Header -->
         <div class="brand-header">
-            <div class="logo"><img src="images/bheshaja-logo.png" alt="Spice House Logo"></div>
-            <div class="brand-name">भेषज</div>
-            <div class="brand-subname">Bheshaja - The Ancient Spice House</div>
+            <h1 class="brand-name">भेषज Bheshaja</h1>
+            <p class="brand-description">Welcome to Bheshaja, a home-based business dedicated to creating authentic, healthy, and traditional Ayurvedic products. Our carefully crafted items are made with locally sourced ingredients and traditional methods, bringing you the best of ancient wisdom in every package.</p>
         </div>
 
-        <!-- Product Catalog Description -->
-        <h1>Nutritious Organic Homemade Products</h1>
-        <p>Indulge in the authentic taste of traditional South Indian cuisine, made with high-quality ingredients and packed with rich nutritional benefits, perfect for those seeking both flavor and wellness. Prepared fresh on every order.</p>
-
-        <!-- Tabs for Product Categories -->
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab('dry-pudis')">Dry Pudis</div>
-            <div class="tab" onclick="switchTab('post-natal')">Post Natal Care</div>
-            <div class="tab" onclick="switchTab('chutney')">Chuteny</div>
-        </div>
-
-        <!-- Pudis Section -->
-        <div id="dry-pudis" class="product-grid">
+        <h2 class="section-title">Our Chutney Powders (Pudis)</h2>
+        <div class="products-grid">
             <div class="product-card">
-                <a href="products/pudis/tambuli_ganike">
-                    <div class="product-img">
-                        <img src="images/ganike-leaves.jpg" alt="Ganike Tambuli Pudi">
-                    </div>
-                    <div class="product-title">Ganike Tambuli Pudi</div>
-                </a>
-                <div class="product-description">
-                    Improves digestion and alleviates stomach ulcers, boosts immunity, promotes healthy skin, remedy for cold and cough and for stomach related problems.
-                </div>
-                <div class="preparation-time">Preparation Time: 5 Days</div>
+                <h3>Karibevu Pudi</h3>
+                <p>A traditional curry leaf chutney powder made with carefully roasted curry leaves, urad dal, pepper, tamarind, and dried coconut. Perfect for enhancing your daily meals with authentic flavors.</p>
+                <a href="products/pudis/karibevu/index.html" class="product-link">Learn More</a>
             </div>
-            
-
             <div class="product-card">
-                <div class="product-img">
-                    <img src="images/brahmi-leaves.jpg" alt="Brahmi Tambuli Pudi">
-                </div>
-                <div class="product-title">Brahmi Tambuli Pudi</div>
-                <div class="product-description">
-                    Contains powerful antioxidants, boost brain function, reduce inflammation, help lower blood pressure levels, prevent anxiety and stress.
-                </div>
-                <!-- <div class="product-price">₹238/125g | ₹458/250g</div> -->
-                <div class="preparation-time">Preparation Time: 5 Days</div>
+                <h3>Pudina Pudi</h3>
+                <p>A refreshing mint chutney powder combining dried mint leaves, channa dal, red chillies, tamarind, and dried coconut. A perfect blend of cooling properties and traditional taste.</p>
+                <a href="products/pudis/pudina/index.html" class="product-link">Learn More</a>
             </div>
-
             <div class="product-card">
-                <div class="product-img">
-                    <img src="images/pudina-leaves.jpg" alt="Pudina Pudi">
-                </div>
-                <div class="product-title">Pudina Pudi</div>
-                <div class="product-description">
-                    Natural body cooler, rich in nutrients, improve irritable bowel syndrome, relieve indigestion, and more.
-                </div>
-                <!-- <div class="product-price">₹135/125g | ₹239/250g</div> -->
-                <div class="preparation-time">Preparation Time: 5 Days</div>
+                <h3>Ganike Tambuli Pudi</h3>
+                <p>Black Nightshade (Manathakkali) chutney powder, made with dried ganike leaves, roasted coriander seeds, jeera, pepper, and coconut. Rich in traditional medicinal properties.</p>
+                <a href="products/pudis/tambuli_ganike/index.html" class="product-link">Learn More</a>
             </div>
-
             <div class="product-card">
-                <div class="product-img">
-                    <img src="images/curry-leaves.jpg" alt="Curry Leaves Pudi">
-                </div>
-                <div class="product-title">Curry Leaves Pudi</div>
-                <div class="product-description">
-                    Lowers cholesterol level, boosts digestion, aids hair growth, maintains eye health, helps in weight loss, blood circulation and more.
-                </div>
-                <!-- <div class="product-price">₹151/125g | ₹278/250g</div> -->
-                <div class="preparation-time">Preparation Time: 5 Days</div>
+                <h3>Ondelaga Tambuli Pudi</h3>
+                <p>Brahmi (Water Hyssop) chutney powder crafted with dried ondelaga leaves, roasted coriander seeds, jeera, pepper, and coconut. A traditional ayurvedic blend.</p>
+                <a href="products/pudis/tambuli_ondelega/index.html" class="product-link">Learn More</a>
             </div>
         </div>
 
-        <!-- Post Natal Section (Hidden by Default) -->
-        <div id="post-natal" class="product-grid hidden">
+        <h2 class="section-title">Fresh Chutneys</h2>
+        <div class="products-grid">
             <div class="product-card">
-                <div class="product-img">
-                    <img src="images/plain-lehya.jpg" alt="Plain Lehya">
-                </div>
-                <div class="product-title">Lehya</div>
-                <div class="product-description">Primarily for post maternal care, improves stamina, and is effective against digestive ailments such as sprue and constipation.</div>
-                <!-- <div class="product-price">₹2200/1Kg</div> -->
-                <div class="preparation-time">Preparation Time: 2 Weeks</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/sukku-vellam.jpg" alt="Sukku Vellam">
-                </div>
-                <div class="product-title">Sukku Vellam</div>
-                <div class="product-description">Keeps body warm, improves digestion and resistance.</div>
-                <!-- <div class="product-price">₹510/300g</div> -->
-                <div class="preparation-time">Preparation Time: 2 Weeks</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/pudikayam.jpg" alt="Pudikayam">
-                </div>
-                <div class="product-title">Pudikayam</div>
-                <div class="product-description">Detoxifies the body.</div>
-                <!-- <div class="product-price">₹600/350g</div> -->
-                <div class="preparation-time">Preparation Time: 2 Weeks</div>
+                <h3>Kottambri Chutney</h3>
+                <p>A fresh and aromatic coriander chutney made with freshly sourced coriander, green chilli, and asafoetida, reduced by frying in cold-pressed groundnut oil.</p>
+                <a href="products/chutneys/kottambri/index.html" class="product-link">Learn More</a>
             </div>
         </div>
 
-        <!-- Chutney Section (Hidden by Default) -->
-        <div id="chutney" class="product-grid hidden">
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/corriander-leaves.jpg" alt="Corriander Chutney">
-                </div>
-                <div class="product-title">Corriander Chutney</div>
-                <div class="product-description">Rich in iron, antioxidants and vitamin K.</div>
-                <!-- <div class="product-price">₹105/100g | ₹235/250g</div> -->
-                <div class="preparation-time">Preparation Time: 1 Week</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="images/ginger-chutny.jpg" alt="Ginger Chutney">
-                </div>
-                <div class="product-title">Ginger Chutney</div>
-                <div class="product-description"></div>
-                <!-- <div class="product-price"></div> -->
-                <div class="preparation-time"></div>
-            </div>
+        <div class="about-section">
+            <h2 style="color: #c9a100;">About Our Products</h2>
+            <p>Each product at Bheshaja is crafted with care and attention to detail. We use only carefully selected, locally sourced ingredients to ensure the highest quality. Our traditional preparation methods preserve the authentic taste and therapeutic properties of each ingredient. Every product comes with a QR code that links to detailed information about its ingredients and benefits.</p>
         </div>
 
-        <!-- Notes Section -->
-        <br><br>
-        <div class="note-box">
-            <h3>Notes</h3>
-                <ul>
-                    <li>Contact us to get price details for larger quantities for each product. Retail and batch packing available.</li>
-                    <li>The images presented above are for aesthetics and to mainly depict the main ingredient for each product.</li>
-                </ul>
-            
-            <br><br>
-        </div>
-
-        <!-- About Section -->
-        <br><br>
-        <div class="about-box">
-            <h3>About the Chef</h3>
-            Hello! My name is Jayashri and I am a passionate advocate of traditional South Indian cuisine, deeply rooted in its rich heritage and nutritional wisdom. Having grown up in a traditional Iyengar household, I have spent decades mastering the art of cooking—not just learning recipes, but also understanding the medicinal benefits of every ingredient.
-            <br><br>
-            With over 30 years of experience in running a home and raising three wonderful children, I have always believed that food is more than just sustenance—it is a source of nourishment, healing, and well-being inspired by generations of wisdom.
-            <br><br>
-            Now, with some time to dedicate to my passion, I am on a mission to share the goodness of time-honored recipes with a wider audience. Every product I offer is freshly made upon order, ensuring authenticity, purity, and the highest nutritional value.
-            <br><br>
-            Through this platform, I hope to bring you the essence of South Indian tradition—one that is rooted in purity, health, and the love of home-cooked food. Join me on this journey to rediscover the power of natural, nourishing ingredients, just the way our ancestors intended.
-            <br><br>
-            Let’s celebrate the richness of traditional food, made with care and passed down through generations.
-            <br><br>
-        </div>
-
-        <!-- Contact Section -->
-         <br><br>
-        <div class="contact-box">
-            <h2>Contact Us (Jayashri K V)</h2>
-            <div class="contact-icons">
-                <a href="tel:+918073124291"><i class="fas fa-phone-alt"></i> Call</a>
-                <a href="https://wa.me/918073124291" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-            </div>
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p class="contact-info">For orders and inquiries, please reach out to us:</p>
+            <p class="contact-info">Phone/WhatsApp: +91-8073124291</p>
         </div>
     </div>
-
-    <script>
-        function switchTab(category) {
-            document.getElementById('dry-pudis').classList.add('hidden');
-            document.getElementById('chutney').classList.add('hidden');
-            document.getElementById('post-natal').classList.add('hidden');
-            document.getElementById(category).classList.remove('hidden');
-
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelector(`[onclick="switchTab('${category}')"]`).classList.add('active');
-        }
-    </script>
-
 </body>
 </html>
