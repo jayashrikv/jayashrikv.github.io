@@ -12,6 +12,52 @@
             margin: 0;
             padding: 0;
         }
+        .site-header {
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-title {
+            text-align: center;
+        }
+        .header-brand {
+            font-size: 2rem;
+            color: #c9a100;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .header-sanskrit {
+            font-size: 1.2rem;
+            color: #8a7000;
+            margin: 5px 0 0;
+        }
+        .header-logo-link, .header-title-link {
+            text-decoration: none;
+            display: block;
+        }
+        .header-title-link:hover .header-brand {
+            color: #ffcc00;
+        }
         .container {
             max-width: 800px;
             margin: auto;
@@ -123,10 +169,25 @@
     </style>
 </head>
 <body>
+    <div class="site-header">
+        <div class="header-content">
+            <a href="../../../index.html" class="header-logo-link">
+                <div class="header-logo">
+                    <img src="../../../images/bheshaja-logo.png" alt="Bheshaja Logo">
+                </div>
+            </a>
+            <a href="../../../index.html" class="header-title-link">
+                <div class="header-title">
+                    <h1 class="header-brand">Bheshaja</h1>
+                    <p class="header-sanskrit">भेषज</p>
+                </div>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div class="product-header">
             <div class="product-image">
-                <img src="../../../images/curry-leaves.jpg" alt="Fresh Curry Leaves">
+                <img src="../../../images/curry-leaves.jpg" alt="Karibevu (Curry) Leaves">
             </div>
             <h1 class="product-title">Karibevu Pudi</h1>
             <p class="product-subtitle">Curry Leaf Chutney Powder</p>
