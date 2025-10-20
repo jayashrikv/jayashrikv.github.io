@@ -49,7 +49,14 @@
         .header-sanskrit {
             font-size: 1.2rem;
             color: #8a7000;
-            margin: 0;
+            margin: 5px 0 0;
+        }
+        .header-logo-link, .header-title-link {
+            text-decoration: none;
+            display: block;
+        }
+        .header-title-link:hover .header-brand {
+            color: #ffcc00;
         }
         .container {
             max-width: 800px;
@@ -164,13 +171,17 @@
 <body>
     <div class="site-header">
         <div class="header-content">
-            <div class="header-logo">
-                <img src="../../../images/bheshaja-logo.png" alt="Bheshaja Logo">
-            </div>
-            <div class="header-title">
-                <h1 class="header-brand">Bheshaja</h1>
-                <p class="header-sanskrit">भेषज</p>
-            </div>
+            <a href="../../../index.html" class="header-logo-link">
+                <div class="header-logo">
+                    <img src="../../../images/bheshaja-logo.png" alt="Bheshaja Logo">
+                </div>
+            </a>
+            <a href="../../../index.html" class="header-title-link">
+                <div class="header-title">
+                    <h1 class="header-brand">Bheshaja</h1>
+                    <p class="header-sanskrit">भेषज</p>
+                </div>
+            </a>
         </div>
     </div>
     <div class="container">
@@ -223,7 +234,7 @@
         </div>
 
         <div class="back-link">
-            <a href="../../index.html">← Return to Home</a>
+            <a href="../../../index.html">← Return to Home</a>
         </div>
     </div>
 </body>
